@@ -1,0 +1,13 @@
+# Defesa contra segredos e lixo, mesmo com curadoria manual
+*.bak
+*.bak.*
+.claude/
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*.p12
+*.pfx
+.DS_Store

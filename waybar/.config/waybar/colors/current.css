@@ -1,0 +1,12 @@
+/* Auto-generated from Omarchy theme: matte-black */
+@define-color fg         #bebebe;
+@define-color foreground #bebebe;
+@define-color background #121212;
+@define-color module-bg  rgba(18, 18, 18, 0.88);
+@define-color tooltip-bg rgba(18, 18, 18, 0.96);
+@define-color inactive   #8a8a8d;
+@define-color accent     #e68e0d;
+@define-color red        #D35F5F;
+@define-color green      #FFC107;
+@define-color yellow     #b91c1c;
+@define-color blue       #e68e0d;

@@ -1,0 +1,42 @@
+#!/bin/bash
+# Generates waybar color variables from the current Omarchy theme
+# Called by omarchy-theme-set after theme files are applied
+
+COLORS_TOML="$HOME/.config/omarchy/current/theme/colors.toml"
+OUTPUT_CSS="$HOME/.config/waybar/colors/current.css"
+
+get_color() {
+    grep "^$1 " "$COLORS_TOML" | sed 's/.*= *"\(.*\)"/\1/'
+}
+
+hex_to_rgb() {
+    local hex="${1#\#}"
+    echo "$((16#${hex:0:2})), $((16#${hex:2:2})), $((16#${hex:4:2}))"
+}
+
+FG=$(get_color foreground)
+BG=$(get_color background)
+BG_RGB=$(hex_to_rgb "$BG")
+
+mkdir -p "$(dirname "$OUTPUT_CSS")"
+
+cat > "$OUTPUT_CSS" << EOF
+/* Auto-generated from Omarchy theme: $1 */
+@define-color fg         ${FG};
+@define-color foreground ${FG};
+@define-color background ${BG};
+@define-color module-bg  rgba(${BG_RGB}, 0.88);
+@define-color tooltip-bg rgba(${BG_RGB}, 0.96);
+@define-color inactive   $(get_color color8);
+@define-color accent     $(get_color accent);
+@define-color red        $(get_color color1);
+@define-color green      $(get_color color2);
+@define-color yellow     $(get_color color3);
+@define-color blue       $(get_color color4);
+EOF
+
+omarchy-restart-waybar
+
+# >>> omazed hook - do not edit >>>
+omazed set "$1"
+# <<< omazed hook - do not edit <<<
