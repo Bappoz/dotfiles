@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Bloqueia commit com segredo. Instalado via init.templateDir (~/.config/git/config).
+# Se o gitleaks não estiver instalado, avisa e deixa passar — nunca travar o commit por falta da ferramenta.
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  printf '\033[33m[pre-commit]\033[0m gitleaks não encontrado — varredura de segredos ignorada.\n' >&2
+  printf '              instale com: sudo pacman -S gitleaks\n' >&2
+  exit 0
+fi
+
+# gitleaks >= 8.19 usa "git --staged"; versões antigas usam "protect --staged".
+if gitleaks git --staged --no-banner --redact >/dev/null 2>&1; then
+  exit 0
+fi
+
+# Se falhou, decide se foi achado real ou sintaxe não suportada.
+if gitleaks git --help >/dev/null 2>&1; then
+  gitleaks git --staged --no-banner --redact
+else
+  gitleaks protect --staged --no-banner --redact
+fi
+
+status=$?
+if [ $status -ne 0 ]; then
+  printf '\n\033[31m[pre-commit] commit bloqueado: possível segredo detectado acima.\033[0m\n' >&2
+  printf 'Se for falso positivo, adicione o caminho ou a regra em .gitleaksignore\n' >&2
+  printf 'ou pule a verificação uma vez com: git commit --no-verify\n' >&2
+fi
+exit $status

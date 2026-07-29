@@ -5,7 +5,7 @@ set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-PACKAGES=(hypr omarchy waybar walker swayosd kitty tmux btop fastfetch git starship zsh bash nvim)
+PACKAGES=(hypr omarchy waybar walker swayosd kitty tmux btop fastfetch git starship zsh bash aider nvim)
 
 if ! command -v stow >/dev/null 2>&1; then
   echo "GNU Stow não encontrado. Instalando..."

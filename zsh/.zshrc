@@ -140,3 +140,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
+
+# atuin — histórico de shell em SQLite, pesquisável e sincronizável.
+# Guardado por command -v: não quebra o shell se o binário não estiver instalado.
+# --disable-up-arrow mantém o Up navegando o histórico local do zsh; Ctrl-R abre o atuin.
+if command -v atuin >/dev/null 2>&1; then
+  eval "$(atuin init zsh --disable-up-arrow)"
+fi

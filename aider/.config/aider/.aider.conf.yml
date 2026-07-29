@@ -1,0 +1,24 @@
+# Config global do aider. Sobrescreva por projeto com .aider.conf.yml no root.
+
+# Commit automático a cada mudança — é a rede de segurança principal do aider.
+auto-commits: true
+# Não faz commit do que você editou à mão junto com o do agente.
+dirty-commits: false
+# Prefixo pra separar commit de agente de commit seu no log.
+attribute-commit-message-prefix: "aider: "
+# Não polui o autor do commit.
+attribute-author: false
+attribute-committer: false
+
+# Roda lint automático depois de editar e devolve o erro pro modelo corrigir.
+auto-lint: true
+# Não roda teste sozinho — você decide quando.
+auto-test: false
+
+# Mapa do repositório: ajuda o modelo a achar contexto sem você listar arquivo.
+map-tokens: 2048
+
+# Sem análise de uso.
+analytics-disable: true
+# Sem checagem de versão a cada start.
+check-update: false

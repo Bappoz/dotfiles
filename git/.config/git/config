@@ -7,6 +7,7 @@
 	st = status
 [init]
 	defaultBranch = master
+	templateDir = ~/.config/git/template   # copia hooks/pre-commit (gitleaks) em todo repo novo
 [pull]
 	rebase = true 			 # Rebase (instead of merge) on pull
 [push]
