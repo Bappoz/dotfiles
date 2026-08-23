@@ -1,0 +1,94 @@
+{
+  "bar": {
+    "centerAnchor": "omarchy.clock",
+    "layout": {
+      "center": [
+        {
+          "id": "omarchy.indicators"
+        },
+        {
+          "birthYear": 2006,
+          "format": "dddd HH:mm",
+          "formatAlt": "d MMMM 'W'ww yyyy",
+          "id": "omarchy.clock",
+          "lifeExpectancy": 90,
+          "verticalFormat": "HH\n—\nmm"
+        },
+        {
+          "id": "omarchy.keyboard-layout"
+        },
+        {
+          "id": "omarchy.weather"
+        },
+        {
+          "id": "io.github.cempack.omaspotify"
+        },
+        {
+          "id": "omarchy.system-update"
+        }
+      ],
+      "left": [
+        {
+          "id": "omarchy.menu"
+        },
+        {
+          "id": "bappoz.workspaces"
+        }
+      ],
+      "right": [
+        {
+          "id": "crmne.hyprmoncfg"
+        },
+        {
+          "id": "omarchy.tray"
+        },
+        {
+          "id": "tobiasz-p.next-event",
+          "icsUrl": "REPLACE_WITH_YOUR_PRIVATE_ICS_URL"
+        },
+        {
+          "id": "crmne.lyrics"
+        },
+        {
+          "id": "shavanced.notification-center"
+        },
+        {
+          "id": "omarchy.agents"
+        },
+        {
+          "id": "omarchy.bluetooth"
+        },
+        {
+          "id": "omarchy.network"
+        },
+        {
+          "id": "omarchy.audio"
+        },
+        {
+          "id": "omarchy.monitor"
+        },
+        {
+          "id": "omarchy.power"
+        }
+      ]
+    },
+    "position": "top",
+    "transparent": false
+  },
+  "idle": {
+    "lock": 1020,
+    "screensaver": 600
+  },
+  "plugins": [
+    {
+      "id": "shmall.lock"
+    }
+  ],
+  "version": 1,
+  "disabledPlugins": [
+    "omarchy.lock"
+  ],
+  "cloneSourceRestores": [
+    "shmall.lock"
+  ]
+}
