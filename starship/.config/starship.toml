@@ -1,158 +1,22 @@
-"$schema" = 'https://starship.rs/config-schema.json'
-palette = "black_red"
+"$schema" = "https://starship.rs/config-schema.json"
 
+add_newline = false
 
-format = """
-$username\
-$hostname\
-$directory\
-[](bg:bg_main)\
-$git_branch\
-$git_status\
-$python\
-$nodejs\
-$rust\
-$golang\
-$package\
-$cmd_duration\
-$line_break\
-$jobs$shell$character"""
-
-[palettes.black_red]
-success_fg = "white"
-error_fg = "red"
-main_fg = "white"
-dim_fg = "bright-black"
-accent_fg = "red"
-bg_main = "black"
-bg_block = "#400000"
-bg_block2 = "#800000"
-
-
-[fill]
-symbol = "─"
-style = "fg:dim_fg"
-
-[character]
-success_symbol = "[❯](bold fg:accent_fg)"
-error_symbol = "[❯](bold fg:error_fg)"
-vicmd_symbol = "[❮](bold fg:accent_fg)"
-format = " $symbol "
-
-[os]
-format = "[ $symbol]($style)"
-style = "fg:main_fg bg:bg_block"
-disabled = false
-
-[os.symbols]
-Fedora = " "
-Linux = " "
+format = "$username[➜](fg:#62ED8B)$directory$git_branch$status "
 
 [username]
 show_always = true
-format = "[  $user ]($style)"
-style_user = "fg:main_fg bg:bg_block"
-style_root = "fg:main_fg bg:bg_block"
-
-[hostname]
-ssh_only = true
-format = "[ $hostname ]($style)"
-style = "fg:main_fg bg:bg_block"
+disabled = false
+format = "[@$user ](fg:#E36464)"
 
 [directory]
-format = "[  $path ]($style)[ in](bold fg:error_fg)"
-style = "fg:main_fg bg:bg_main"
-truncation_length = 3
-truncation_symbol = "…/"
-home_symbol = ""
-read_only = " 󰌾"
-
-[directory.substitutions]
-"Documentos" = "󰈙 "
-"Documents" = "󰈙 "
-"Descargas" = " "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-"Videos" = " "
-".config" = ""
+truncation_length = 1
+truncate_to_repo = false
+format = "[ $path](fg:#56B6C2)"
 
 [git_branch]
-symbol = " "
-format = "[ $symbol$branch ]($style)"
-style = "fg:main_fg bg:bg_main"
-
-[git_status]
-style = "fg:accent_fg bg:bg_main"
-format = " [$all_status$ahead_behind ]($style)"
-conflicted = "⚠$count "
-ahead = "⇡$count "
-behind = "⇣$count "
-diverged = "⇕$count "
-untracked = "?$count "
-stashed = "📦$count "
-modified = "~$count "
-staged = "+$count "
-deleted = "✖$count "
-up_to_date = "✓"
-
-
-[python]
-symbol = ""
-format = "[ $symbol $version (\\($virtualenv\\)) ]($style)"
-style = "fg:accent_fg bg:bg_main"
-
-[nodejs]
-symbol = ""
-format = "[ $symbol $version ]($style)"
-style = "fg:accent_fg bg:bg_main"
-
-[rust]
-symbol = ""
-format = "[ $symbol $version ]($style)"
-style = "fg:accent_fg bg:bg_main"
-
-[golang]
-symbol = ""
-format = "[ $symbol $version ]($style)"
-style = "fg:accent_fg bg:bg_main"
-
-[package]
-symbol = "󰏗"
-format = "[ $symbol $version ]($style)"
-style = "fg:accent_fg bg:bg_main"
-
-[cmd_duration]
-min_time = 2000
-format = "[ ⏱ $duration ]($style)"
-style = "fg:dim_fg bg:bg_main"
-
-
-[shell]
-disabled = false
-bash_indicator = "bash"
-zsh_indicator = "zsh"
-fish_indicator = "fish"
-powershell_indicator = "pwsh"
-unknown_indicator = "sh"
-format = "[   $indicator ]($style)"
-style = "fg:dim_fg"
-
-[jobs]
-disabled = false
-symbol = ""
-threshold = 1
-number_threshold = 1
-format = "[ $symbol $number ]($style)"
-style = "fg:dim_fg"
+format = '[ git\(](fg:#DDB15F)[$branch](fg:#D4AAFC)[\)](fg:#DDB15F)'
 
 [status]
 disabled = false
-format = "[ ✖ $status ]($style)"
-style = "fg:error_fg"
-
-[sudo]
-disabled = false
-symbol = ""
-format = "[ $symbol ]($style)"
-style = "fg:accent_fg"
+format = "[ ](fg:#DCB977)"
