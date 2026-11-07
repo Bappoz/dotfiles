@@ -1,0 +1,10 @@
+#!/bin/bash
+if hyprctl clients -j | jq -e '.[] | select(.initialClass == "TUI.zencal")' > /dev/null 2>&1; then
+    hyprctl dispatch closewindow 'initialClass:TUI.zencal'
+else
+    kitty --app-id=TUI.zencal \
+        --override background=#1f1f28 \
+        --override background_opacity=0.88 \
+        --override confirm_os_window_close=0 \
+        -e ~/.local/bin/zen-cal
+fi

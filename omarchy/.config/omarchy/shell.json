@@ -1,30 +1,17 @@
 {
   "bar": {
-    "centerAnchor": "omarchy.clock",
+    "centerAnchor": "bappoz.notch",
+    "id": "bappoz.bar",
     "layout": {
       "center": [
         {
-          "id": "omarchy.indicators"
-        },
+          "id": "bappoz.notch"
+        }
+      ],
+      "centerBegin": [],
+      "centerEnd": [
         {
-          "birthYear": 2006,
-          "format": "dddd HH:mm",
-          "formatAlt": "d MMMM 'W'ww yyyy",
-          "id": "omarchy.clock",
-          "lifeExpectancy": 90,
-          "verticalFormat": "HH\n—\nmm"
-        },
-        {
-          "id": "omarchy.keyboard-layout"
-        },
-        {
-          "id": "omarchy.weather"
-        },
-        {
-          "id": "io.github.cempack.omaspotify"
-        },
-        {
-          "id": "omarchy.system-update"
+          "id": "bappoz.workspaces"
         }
       ],
       "left": [
@@ -32,28 +19,38 @@
           "id": "omarchy.menu"
         },
         {
-          "id": "bappoz.workspaces"
+          "id": "jamesforan.workwonders"
+        },
+        {
+          "difficulty": 0.1,
+          "id": "io.github.heitorm50.omapkdex",
+          "representativeSpeciesId": 0,
+          "shopDifficulty": 0.6
         }
       ],
       "right": [
-        {
-          "id": "crmne.hyprmoncfg"
-        },
         {
           "id": "omarchy.tray"
         },
         {
           "id": "tobiasz-p.next-event",
-          "icsUrl": "REPLACE_WITH_YOUR_PRIVATE_ICS_URL"
+          "colorOnBar": true,
+          "icsUrl": "",
+          "maxFeedSizeMiB": 10,
+          "maxTitleLength": 15,
+          "refreshMinutes": 8,
+          "showCalendarLabel": true,
+          "showDaysAhead": 4,
+          "showOnlyWithVideoLink": false
         },
         {
-          "id": "crmne.lyrics"
+          "id": "omaplug"
+        },
+        {
+          "id": "dev.egoist.memory-usage"
         },
         {
           "id": "shavanced.notification-center"
-        },
-        {
-          "id": "omarchy.agents"
         },
         {
           "id": "omarchy.bluetooth"
@@ -68,12 +65,103 @@
           "id": "omarchy.monitor"
         },
         {
+          "id": "devfrp.dev-ports"
+        },
+        {
           "id": "omarchy.power"
+        }
+      ],
+      "tray": [
+        {
+          "id": "omarchy.indicators"
+        },
+        {
+          "birthYear": 2006,
+          "format": "dddd HH:mm",
+          "formatAlt": "d MMMM 'W'ww yyyy",
+          "id": "omarchy.clock",
+          "lifeExpectancy": 90,
+          "verticalFormat": "HH\n—\nmm"
+        },
+        {
+          "id": "omarchy.elsewhen",
+          "cities": [
+            {
+              "name": "East",
+              "zone": "Brazil/East"
+            },
+            {
+              "name": "London",
+              "zone": "Europe/London"
+            },
+            {
+              "name": "Dubai",
+              "zone": "Asia/Dubai"
+            },
+            {
+              "name": "Tokyo",
+              "zone": "Asia/Tokyo"
+            },
+            {
+              "name": "Los Angeles",
+              "zone": "America/Los_Angeles"
+            }
+          ]
+        },
+        {
+          "id": "omarchy.system-update"
+        },
+        {
+          "id": "omarchy.keyboard-layout"
+        }
+      ]
+    },
+    "pluginFolder": {
+      "widgets": [
+        {
+          "id": "gotar.omarchy-themes"
+        },
+        {
+          "id": "omarchy.agents"
+        },
+        {
+          "id": "omarchy.weather"
+        },
+        {
+          "id": "netmojo.omdrop"
+        },
+        {
+          "id": "io.github.momostifler96.omarchy-cleaner"
+        },
+        {
+          "id": "dizziee.system-updates"
         }
       ]
     },
     "position": "top",
-    "transparent": false
+    "transparent": true
+  },
+  "cloneSourceRestores": [
+    "io.github.sirjul1337.lock-explorer",
+    "bappoz.dock"
+  ],
+  "disabledPlugins": [
+    "omarchy.lock",
+    "omarchy.dock"
+  ],
+  "dock": {
+    "autohide": true,
+    "pinned": [
+      "org.gnome.Nautilus",
+      "spotifast",
+      "brave-browser",
+      "elecwhat",
+      "orca-ide",
+      "com.anthropic.Claude",
+      "chatgpt",
+      "X"
+    ],
+    "position": "bottom"
   },
   "idle": {
     "lock": 1020,
@@ -81,14 +169,72 @@
   },
   "plugins": [
     {
-      "id": "shmall.lock"
+      "id": "bobbynicholas.omaland"
+    },
+    {
+      "avatar": "",
+      "design": "editorial",
+      "id": "io.github.sirjul1337.lock-explorer"
+    },
+    {
+      "id": "tenzin.live-wallpaper"
+    },
+    {
+      "id": "ai-usage.notch",
+      "settingsVersion": 1,
+      "edge": "right",
+      "offset": 0.25,
+      "monitor": "focused",
+      "size": "small",
+      "autoHide": true,
+      "expandBehavior": "hover",
+      "pollingInterval": 900,
+      "showProviderLabel": true,
+      "showPercentage": false,
+      "showResetTimer": true,
+      "animations": true,
+      "accentColor": "#7c9cff",
+      "providerColors": {
+        "claude": "#d97757",
+        "codex": "#74aa9c",
+        "antigravity": "#3186ff",
+        "cursor": "#edecec"
+      },
+      "showInsights": true,
+      "enabledProviders": {
+        "claude": true,
+        "codex": true,
+        "antigravity": true,
+        "cursor": true
+      }
+    },
+    {
+      "id": "gotar.omarchy-themes"
+    },
+    {
+      "id": "omarchy.agents"
+    },
+    {
+      "id": "omarchy.weather"
+    },
+    {
+      "id": "netmojo.omdrop"
+    },
+    {
+      "id": "omarchy.tray"
+    },
+    {
+      "id": "io.github.momostifler96.omarchy-cleaner"
+    },
+    {
+      "id": "dizziee.system-updates"
+    },
+    {
+      "id": "bappoz.notch"
+    },
+    {
+      "id": "bappoz.dock"
     }
   ],
-  "version": 1,
-  "disabledPlugins": [
-    "omarchy.lock"
-  ],
-  "cloneSourceRestores": [
-    "shmall.lock"
-  ]
+  "version": 1
 }

@@ -19,7 +19,8 @@ hl.config({
 
     -- Increase sensitivity for mouse/trackpad (default: 0).
     sensitivity = -0.15,
-    scroll_factor = 0.5,
+    -- Keep mouse-wheel scrolling responsive, including inside terminals.
+    scroll_factor = 1.2,
 
     touchpad = {
       -- Use natural (inverse) scrolling.
@@ -29,7 +30,7 @@ hl.config({
       clickfinger_behavior = true,
 
       -- Control the speed of your scrolling.
-      scroll_factor = 0.5,
+      scroll_factor = 0.8,
 
       -- Enable the touchpad while typing.
       disable_while_typing = false,
@@ -39,7 +40,7 @@ hl.config({
 
 -- App-specific touchpad scroll speeds.
 o.window("(Alacritty|kitty|foot)", { scroll_touchpad = 1.5 })
-o.window("com.mitchellh.ghostty", { scroll_touchpad = 0.2 })
+o.window("com.mitchellh.ghostty", { scroll_touchpad = 1.5 })
 
 -- Enable touchpad gestures for changing workspaces.
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Gestures/

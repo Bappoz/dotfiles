@@ -78,6 +78,9 @@ plugins=(
   archlinux
 )
 
+# Sugestão de autocomplete mais destacável (cor cyan do tema Knight Sit do Omarchy + itálico)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#78acab,italic'
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -130,6 +133,12 @@ unset _cmd
 export PATH="$HOME/.local/bin:$PATH"
 alias zed=zeditor
 
+# pwn.college: ignora uma configuração global do OpenSSH com permissões inválidas.
+# Depois de iniciar um desafio no site, conecte com: pwn
+pwn() {
+  command ssh -F "$HOME/.ssh/config" pwn "$@"
+}
+
 export GOPATH="$HOME/.local/share/go"
 export PATH="$GOPATH/bin:$PATH"
 
@@ -147,3 +156,20 @@ export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
 if command -v atuin >/dev/null 2>&1; then
   eval "$(atuin init zsh --disable-up-arrow)"
 fi
+
+# Gazebo: força o discovery do gz-transport para o loopback.
+# Sem isto o gz-transport escolhe o WiFi (wlp2s0), que fica em mode DORMANT com
+# power-save e não devolve o multicast 239.255.0.7:10317 para o próprio host --
+# servidor e GUI nunca se acham, a GUI abre sem janela e a física não anda.
+# Verificado: sem GZ_IP -> `gz topic -l` = 0 tópicos; com GZ_IP -> 12.
+# Efeito colateral aceito: a simulação passa a ser visível só nesta máquina.
+export GZ_IP=127.0.0.1
+
+# ESP-IDF (pacote esp-idf em /opt/esp-idf): `get_idf` põe idf.py, toolchain e venv no PATH.
+# Alias em vez de source no boot: export.sh é lento e altera PATH/python globalmente.
+export IDF_PATH=/opt/esp-idf
+alias get_idf='. /opt/esp-idf/export.sh'
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/bappoz/.local/bin:$PATH"

@@ -1,4 +1,5 @@
 {
+  "style.background": {"icon":"","label":"Background","aliases":["background","wallpaper"],"action":"~/.config/omarchy/plugins/tenzin.live-wallpaper/live-wallpaper.sh"},
   // Extend the Quickshell Omarchy menu with JSONC.
   //
   // IDs are object keys. The parent is inferred from the dotted id, so

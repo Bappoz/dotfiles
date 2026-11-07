@@ -1,0 +1,12 @@
+singleton Design 1.0 Design.qml
+Icon 1.0 Icon.qml
+IconButton 1.0 IconButton.qml
+Battery 1.0 Battery.qml
+Waveform 1.0 Waveform.qml
+Header 1.0 Header.qml
+Vinyl 1.0 Vinyl.qml
+DeskCalendar 1.0 DeskCalendar.qml
+WindowPreview 1.0 WindowPreview.qml
+DropZone 1.0 DropZone.qml
+CameraEffect 1.0 CameraEffect.qml
+CircleChoice 1.0 CircleChoice.qml

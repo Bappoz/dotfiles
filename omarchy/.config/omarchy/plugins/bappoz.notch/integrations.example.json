@@ -1,0 +1,7 @@
+{
+  "location": {"latitude": null, "longitude": null, "timezone": "America/Sao_Paulo"},
+  "prayer": {"method": "MWL"},
+  "markets": {"base": "BRL", "currencies": ["USD", "EUR", "GBP"], "coins": ["bitcoin", "ethereum"], "stocks": [], "alphaVantageKey": "", "coinGeckoKey": ""},
+  "homeAssistant": {"url": "", "token": "", "entities": []},
+  "spotify": {"token": ""}
+}

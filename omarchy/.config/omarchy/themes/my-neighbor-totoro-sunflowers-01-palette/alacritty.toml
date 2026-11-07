@@ -1,0 +1,51 @@
+[colors.primary]
+background = "#1c1917"
+foreground = "#f2efe4"
+
+[colors.cursor]
+text = "#1c1917"
+cursor = "#fffff4"
+
+[colors.vi_mode_cursor]
+text = "#1c1917"
+cursor = "#fffff4"
+
+[colors.search.matches]
+foreground = "#1c1917"
+background = "#caae45"
+
+[colors.search.focused_match]
+foreground = "#1c1917"
+background = "#d2a5a3"
+
+[colors.footer_bar]
+foreground = "#1c1917"
+background = "#f2efe4"
+
+[colors.selection]
+text = "#1c1917"
+background = "#caae45"
+
+[colors.normal]
+black = "#1c1917"
+red = "#d2a5a3"
+green = "#6a8c52"
+yellow = "#caae45"
+blue = "#408c9f"
+magenta = "#947a94"
+cyan = "#63958e"
+white = "#f2efe4"
+
+[colors.bright]
+black = "#5d5b59"
+red = "#f4c6c4"
+green = "#89ac70"
+yellow = "#eecf65"
+blue = "#62acbf"
+magenta = "#b499b4"
+cyan = "#82b5ae"
+white = "#fffff4"
+# omarchy-glass begin
+[window]
+opacity = 0.65
+# omarchy-glass end

@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.heitorm50.omapkdex",
+  "name": "OmaPkDex",
+  "version": "0.1.0",
+  "author": "HeitorM50",
+  "license": "MIT",
+  "description": "A creature in your bar that hatches and evolves as you burn AI coding tokens, reading the usage records omarchy.agents already collects",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "OmaPkDex",
+    "description": "Animated sprite that evolves with your AI token usage, with a Pokédex, a per-individual profile (level, nature, ability, IVs, stats, moves), a catch log, Rare Candy from filled rate limits, and a token shop.",
+    "category": "AI",
+    "aliases": [
+      "omapkdex",
+      "poketokenbar",
+      "companion",
+      "pokemon"
+    ],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "difficulty": 0.3,
+      "spriteSize": 22,
+      "showTokens": true,
+      "showLimitPercent": false,
+      "seedFromExisting": false,
+      "pollSeconds": 60,
+      "shopDifficulty": 1.0,
+      "representativeSpeciesId": 0
+    },
+    "schema": [
+      {
+        "key": "difficulty",
+        "type": "real",
+        "label": "Growth difficulty",
+        "min": 0.1,
+        "max": 2.0,
+        "step": 0.1,
+        "defaultValue": 0.3,
+        "description": "Multiplies evolution thresholds. Below 1 grows faster. Changing it rescales the progress you already banked, so nothing evolves or graduates for free. The 0.3 default is tuned for ~50M tokens/day; use 1.0 for the original PokeTokenBar balance (~253M/day)."
+      },
+      {
+        "key": "shopDifficulty",
+        "type": "real",
+        "label": "Shop prices",
+        "min": 0.1,
+        "max": 2.0,
+        "step": 0.1,
+        "defaultValue": 1.0,
+        "description": "Multiplies shop prices, independent of growth difficulty. Below 1 is cheaper. Both have sliders in the Settings tab."
+      },
+      {
+        "key": "spriteSize",
+        "type": "integer",
+        "label": "Sprite size in the bar (px)",
+        "min": 14,
+        "max": 40,
+        "step": 1,
+        "defaultValue": 22
+      },
+      {
+        "key": "showTokens",
+        "type": "boolean",
+        "label": "Show today's tokens next to the sprite",
+        "defaultValue": true
+      },
+      {
+        "key": "showLimitPercent",
+        "type": "boolean",
+        "label": "Show the active short-window percentage",
+        "defaultValue": false
+      },
+      {
+        "key": "seedFromExisting",
+        "type": "boolean",
+        "label": "Count usage already recorded",
+        "defaultValue": false,
+        "description": "By default counting starts at zero, so the first creature does not graduate instantly. Turn on to let your existing lifetime total count toward progress."
+      },
+      {
+        "key": "pollSeconds",
+        "type": "integer",
+        "label": "Re-check interval (seconds)",
+        "min": 15,
+        "max": 900,
+        "step": 15,
+        "defaultValue": 60,
+        "description": "Safety net: the usage records are watched by FileView and react immediately. This timer only covers a write that produces no file event."
+      },
+      {
+        "key": "representativeSpeciesId",
+        "type": "integer",
+        "label": "Species pinned to the bar",
+        "min": 0,
+        "max": 649,
+        "step": 1,
+        "defaultValue": 0,
+        "description": "Pokédex number of the species to show in the bar, independent of the companion you are raising. 0 follows the companion. Easier from the star on a Pokédex cell."
+      }
+    ]
+  }
+}

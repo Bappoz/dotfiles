@@ -1,0 +1,10 @@
+{
+  "omarchy": "4.5.0-3",
+  "theme": "my-neighbor-totoro-sunflowers-01-palette",
+  "source": "installed user configuration",
+  "excludedPrivateFields": [
+    "shell.json: icsUrl",
+    "shell.json: avatar"
+  ],
+  "plugins": "vendored source and assets; see plugin-sources.json"
+}

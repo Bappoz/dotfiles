@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "bappoz.notch",
+  "name": "Notchi for Omarchy",
+  "version": "0.2.2",
+  "author": "Bappoz; inspired by nannndev/OpenNotchi",
+  "license": "MIT",
+  "description": "A native dynamic island for Omarchy with media, calendar, files, focus and agents.",
+  "kinds": [
+    "service",
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "Notch.qml"
+  },
+  "barWidget": {
+    "displayName": "Notchi",
+    "description": "Dynamic island inspired by OpenNotchi",
+    "category": "System",
+    "allowMultiple": false,
+    "defaults": {
+      "hoverDelay": 220,
+      "theme": "glass",
+      "animations": true,
+      "animationStyle": "fluid"
+    },
+    "schema": [
+      {
+        "key": "hoverDelay",
+        "type": "integer",
+        "label": "Hover delay (ms)",
+        "min": 100,
+        "max": 1000,
+        "defaultValue": 220
+      },
+      {
+        "key": "theme",
+        "type": "enum",
+        "label": "Appearance",
+        "options": [
+          "glass",
+          "midnight",
+          "frosted"
+        ],
+        "defaultValue": "glass"
+      },
+      {
+        "key": "animations",
+        "type": "boolean",
+        "label": "Animations",
+        "defaultValue": true
+      },
+      {
+        "key": "animationStyle",
+        "type": "enum",
+        "label": "Open animation",
+        "options": [
+          "fluid",
+          "bouncy",
+          "waterfall",
+          "snappy",
+          "pop",
+          "gentle",
+          "flip3D",
+          "depth3D",
+          "cube3D"
+        ],
+        "defaultValue": "fluid"
+      }
+    ]
+  }
+}

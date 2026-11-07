@@ -1,0 +1,116 @@
+[
+  {
+    "id": "ai-usage.notch",
+    "remote": "https://github.com/Bappoz/omarchy-ai-usage.git",
+    "revision": "8a0525824ed8e2e416668dc79c276e533e7115d6",
+    "localChanges": true
+  },
+  {
+    "id": "bobbynicholas.omaland",
+    "remote": "https://github.com/bobby-nicholas/omaland.git",
+    "revision": "ec232b6aa2e31b2f089ad89b653cd706989865b9",
+    "localChanges": false
+  },
+  {
+    "id": "crmne.hyprmoncfg",
+    "remote": "https://github.com/crmne/omarchy-hyprmoncfg.git",
+    "revision": "c41913513e5e937b6f0e8c3736cf951fd1fb818b",
+    "localChanges": false
+  },
+  {
+    "id": "dev.egoist.memory-usage",
+    "remote": "https://github.com/egoist/omarchy-memory-usage.git",
+    "revision": "320a8def2362954e7c84a1fe19e494e585a86772",
+    "localChanges": false
+  },
+  {
+    "id": "devfrp.dev-ports",
+    "remote": "https://github.com/devfrp/omarchy-dev-ports.git",
+    "revision": "154e6ccaf11386473cc49a4ab3f2b1e6e9592831",
+    "localChanges": false
+  },
+  {
+    "id": "dizziee.system-updates",
+    "remote": "https://github.com/JJDizz1L/dizziee.system-updates.git",
+    "revision": "2685e3a392c903eaac388c8f63dd9b9712e2131d",
+    "localChanges": false
+  },
+  {
+    "id": "gotar.omarchy-themes",
+    "remote": "https://github.com/gotar/omarchy-themes.git",
+    "revision": "e443eea5e9d0860aee1f6b4bf4b5b868ea40a6fa",
+    "localChanges": false
+  },
+  {
+    "id": "io.github.grichard99.omaproton-vpn",
+    "remote": "https://github.com/grichard99/omaproton-vpn.git",
+    "revision": "6d9165dec17645abebfb3a4008d195a80060f67b",
+    "localChanges": false
+  },
+  {
+    "id": "io.github.heitorm50.omapkdex",
+    "remote": "https://github.com/HeitorM50/omapkdex.git",
+    "revision": "339f840ba15981b78283d00fe88df95bc0e9b698",
+    "localChanges": false
+  },
+  {
+    "id": "io.github.jeocrypto.launchpad",
+    "remote": "https://github.com/JeoCrypto/omarchy-spotlight-apps.git",
+    "revision": "7facb4e1409c584060f07bef663934478add884b",
+    "localChanges": false
+  },
+  {
+    "id": "io.github.momostifler96.omarchy-cleaner",
+    "remote": "https://github.com/momostifler96/omarchy-cleaner.git",
+    "revision": "19930160fd4d1cefe8d9ca9e0cfc1cbe2438a9a3",
+    "localChanges": false
+  },
+  {
+    "id": "io.github.sirjul1337.lock-explorer",
+    "remote": "https://github.com/SirJul1337/omarchy-lock-explorer.git",
+    "revision": "5d5dec438e46fee9052f1a87ba6764d73e3c7d1c",
+    "localChanges": false
+  },
+  {
+    "id": "jamesforan.workwonders",
+    "remote": "https://github.com/JamesForan/workwonders.git",
+    "revision": "4e0ba65b002ec24c4a45251ff5e36a888d063027",
+    "localChanges": false
+  },
+  {
+    "id": "limon.todo",
+    "remote": "https://github.com/sheikhlimon/omarchy-todo.git",
+    "revision": "f69bf748ed6129ce23757e2516cd588538a8693b",
+    "localChanges": false
+  },
+  {
+    "id": "omaplug",
+    "remote": "https://github.com/fross100/omaplug.git",
+    "revision": "efa46690991ea59c3c290456807545dd7350dc03",
+    "localChanges": true
+  },
+  {
+    "id": "shavanced.notification-center",
+    "remote": "https://github.com/Shavanced/omarchy-notification-center-plugin.git",
+    "revision": "8fa2c0c3610df67eb245c73ef42b81ada073b244",
+    "localChanges": false
+  },
+  {
+    "id": "shmall.lock",
+    "remote": "https://github.com/shmall03/omarchy-shmall.lock-plugin.git",
+    "revision": "cdd0e053c55d4e028bcbb53c5da0f95ec4dcdc6e",
+    "localChanges": false
+  },
+  {
+    "id": "tenzin.live-wallpaper",
+    "remote": "https://github.com/yesheytenzin/live-wallpaper.git",
+    "revision": "7f7d893c6ce1e31b593e1c1539434bd5073ccd35",
+    "localChanges": false
+  },
+  {
+    "id": "tobiasz-p.next-event",
+    "remote": "https://github.com/tobiasz-p/next-event.git",
+    "revision": "4cf958c19e890a7b470de08ced6e083bc1b30d3f",
+    "localChanges": false
+  }
+]

@@ -1,0 +1,23 @@
+singleton Runtime 1.0 Runtime.qml
+Agents 1.0 Agents.qml
+Calendar 1.0 Calendar.qml
+Field 1.0 Field.qml
+Files 1.0 Files.qml
+Focus 1.0 Focus.qml
+Home 1.0 Home.qml
+Job 1.0 Job.qml
+Mirror 1.0 Mirror.qml
+Notch 1.0 Notch.qml
+NotchButton 1.0 NotchButton.qml
+NotchShape 1.0 NotchShape.qml
+NotchSlider 1.0 NotchSlider.qml
+PlainLabel 1.0 PlainLabel.qml
+Service 1.0 Service.qml
+Settings 1.0 Settings.qml
+Surface 1.0 Surface.qml
+Tools 1.0 Tools.qml
+Extras 1.0 Extras.qml
+VideoPreview 1.0 VideoPreview.qml
+Connections 1.0 Connections.qml
+NotchSwitch 1.0 NotchSwitch.qml
+Clipboard 1.0 Clipboard.qml
