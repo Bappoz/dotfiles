@@ -593,7 +593,7 @@ PanelWindow {
 
       MenuRow {
         visible: menu.running
-        text: Commons.I18n.t("dock.quit")
+        text: "Encerrar"
         onTriggered: window.dock.quit(menu.item)
       }
     }

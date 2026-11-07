@@ -233,8 +233,17 @@ Item {
 
   function quit(item) {
     if (!item) return
+    var entry = root.entryFor(item)
     var windows = item.windows.slice()
     for (var i = 0; i < windows.length; i++) windows[i].toplevel.close()
+
+    // Close apps such as ElecWhat that keep running in their tray after their
+    // last window closes. Only target a single executable, never a launcher.
+    var command = entry ? String(entry.command || entry.execString || "") : ""
+    var executable = command.trim().split(/\s+/)[0].split("/").pop()
+    var launchers = ["env", "flatpak", "gtk-launch", "sh", "bash", "uwsm-app"]
+    if (/^[A-Za-z0-9._+-]+$/.test(executable) && launchers.indexOf(executable) === -1)
+      Quickshell.execDetached(["pkill", "-TERM", "-x", executable])
   }
 
   function openApps() {
