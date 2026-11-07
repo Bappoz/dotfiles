@@ -177,7 +177,15 @@ Item {
   }
 
   function launchEntry(entry) {
-    if (entry && root.appLibrary) root.appLibrary.launch(entry.id, entry.name)
+    if (!entry || !entry.id) return
+    if (root.appLibrary) {
+      root.appLibrary.launch(entry.id, entry.name)
+    } else {
+      // Service clones do not receive the shell's menu-only app library API.
+      // Pass the desktop id as an argument; gtk-launch resolves its Exec safely.
+      var id = String(entry.id)
+      Quickshell.execDetached(["uwsm-app", "--", "gtk-launch", id.endsWith(".desktop") ? id : id + ".desktop"])
+    }
   }
 
   function activate(item) {
@@ -360,6 +368,9 @@ Item {
     // The layout commands call this after changing a workspace's mode.
     function refresh(): void { root.refresh() }
     function apps(): void { appGrid.toggle() }
+    function launchApp(desktopId: string): void {
+      root.launchEntry(DesktopEntries.byId(desktopId))
+    }
   }
 
   // An app dragged out of the app grid: the grid holds the pointer and
